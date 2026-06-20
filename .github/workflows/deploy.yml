@@ -23,12 +23,12 @@ jobs:
 
             git pull origin main
 
-            sudo docker stop cloud-monitor-container || true
-            sudo docker rm cloud-monitor-container || true
+            docker stop cloud-monitor-container || true
+            docker rm cloud-monitor-container || true
 
-            sudo docker build -t cloud-monitor .
+            docker build -t cloud-monitor .
 
-            sudo docker run -d \
+            docker run -d \
               --name cloud-monitor-container \
               -p 5000:5000 \
               cloud-monitor
