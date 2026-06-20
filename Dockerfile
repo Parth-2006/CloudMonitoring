@@ -6,4 +6,7 @@ COPY . .
 
 RUN pip install flask psutil
 
-CMD ["python","dashboard/app.py"]
+EXPOSE 5000
+
+CMD ["python", "dashboard/app.py"]
+
