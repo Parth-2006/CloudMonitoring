@@ -4,9 +4,8 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip install flask psutil
+RUN pip install flask psutil google-cloud-pubsub
 
 EXPOSE 5000
 
-CMD ["python", "dashboard/app.py"]
-
+CMD ["python","dashboard/app.py"]
